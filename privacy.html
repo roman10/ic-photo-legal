@@ -14,12 +14,23 @@
 </head>
 <body>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: April 6, 2026</p>
+  <p class="updated">Last updated: April 22, 2026</p>
 
   <p>IC Photo ("the App") is developed by an independent developer. This policy explains how the App handles your information.</p>
 
   <h2>Photos and Image Processing</h2>
   <p>All photo processing — face detection, background removal, cropping, and export — happens entirely on your device. Your photos are never uploaded to any server. The App does not transmit, store, or have access to your photos outside of your device.</p>
+
+  <h2>Face Data</h2>
+  <p>To generate ID photos, the App uses Google ML Kit's on-device face detection to measure where the face appears in your photo. Specifically, it extracts:</p>
+  <ul>
+    <li>The face bounding box and eye positions (used to align and crop the photo to government ID specifications).</li>
+    <li>Head pose angles (used to correct slight head tilt).</li>
+    <li>Eye-open and smiling probabilities (used to validate photo quality for ID standards).</li>
+  </ul>
+  <p>The App does <strong>not</strong> create face embeddings, perform face recognition, or extract any biometric identifier. The measurements above are geometric coordinates and quality signals, not a fingerprint of your face.</p>
+  <p><strong>Processing location.</strong> All face detection runs on your device using on-device ML models. Face data is never transmitted to any server, and is never shared with any third party.</p>
+  <p><strong>Retention.</strong> Face measurements exist only in memory while you are editing a photo and are discarded when you close or leave the app. The final cropped photo may be saved to the App's local photo history (up to 10 photos; older unpaid photos are automatically removed). You can delete any photo from the History screen at any time, or uninstall the App to remove all stored data.</p>
 
   <h2>Data We Collect</h2>
   <p>The App itself does not collect personal data. Specifically:</p>
